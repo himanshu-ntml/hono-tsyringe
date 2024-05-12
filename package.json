@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "local:dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts --port=3005"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.1",
+    "hono": "^4.3.5",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240403.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "wrangler": "^3.47.0"
+  }
+}
